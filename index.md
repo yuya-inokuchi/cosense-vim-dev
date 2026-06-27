@@ -5,7 +5,7 @@ title: cosense-vim userscripts
 
 # cosense-vim userscripts
 
-- [script.js](./dist/scripts.js)
+- [script.js](./dist/script.js)
 - [Github repository](https://github.com/yuya-inokuchi/cosense-vim-dev)
 
 # Usage 
