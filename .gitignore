@@ -1,0 +1,24 @@
+# Dependencies and package manager caches
+node_modules/
+.bun/
+
+# Build output and local userscript loader
+dist/
+loader.user.js
+
+# Local reverse-engineering/reference dumps
+cosense-reverse/
+
+# Upstream tool docs kept locally while developing
+README.md
+TUTORIAL-ja.md
+
+# Local editor and OS noise
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.swp
+*.swo
+.idea/
+.vscode/

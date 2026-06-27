@@ -1,0 +1,8 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "bun test ./scripts/vim",
+    "test:watch": "bun test --watch ./scripts/vim"
+  }
+}
