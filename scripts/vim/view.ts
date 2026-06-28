@@ -1,5 +1,3 @@
-import cssText from "../style.css" with { type: "text" };
-
 import type { SearchMatch } from "./search";
 import type { VimMode } from "./types";
 
@@ -14,6 +12,22 @@ const bodyClasses = [
     "vim-insert",
     "vim-visual",
 ] as const;
+
+const cssText = [
+    "body.vim-insert #cosense-vim-block-cursor{display:none!important}",
+    "body.vim-visual #cosense-vim-block-cursor{display:none!important}",
+    "body.vim-disabled #cosense-vim-block-cursor{display:none!important}",
+    "#cosense-vim-status{position:fixed;left:12px;right:12px;bottom:20px;z-index:99999;display:flex;align-items:center;justify-content:space-between;padding:4px 8px;background:black;color:white;font-size:12px;font-family:monospace;border-radius:4px;pointer-events:none}",
+    "body.vim-disabled #cosense-vim-status{background:#555;opacity:.75}",
+    "#cosense-vim-pending{min-width:1.5em;text-align:right}",
+    "#cosense-vim-command{flex:1;min-width:0;margin:0 8px;padding:0;border:0;outline:0;background:transparent;color:inherit;font:inherit;pointer-events:auto}",
+    "#cosense-vim-command[hidden]{display:none}",
+    "#cosense-vim-pending[hidden]{display:none}",
+    "#cosense-vim-block-cursor{position:fixed;z-index:99998;background:white;pointer-events:none;display:none;mix-blend-mode:difference}",
+    "#cosense-vim-search-highlights{position:fixed;inset:0;z-index:99997;pointer-events:none}",
+    ".cosense-vim-search-highlight{position:fixed;background:rgba(255,230,0,.42);border-radius:2px;pointer-events:none}",
+    ".cosense-vim-search-highlight-active{background:rgba(255,150,0,.62)}",
+].join("");
 
 export type VimView = {
     commandInput: HTMLInputElement;
